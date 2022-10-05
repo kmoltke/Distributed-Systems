@@ -30,6 +30,8 @@ func main() {
 
 	// Connect to server and close th connection when program closes
 	fmt.Println("Attempting to connect to server...")
+
+	//TODO: if connection fails: either retry og exit
 	connectToServer()
 	defer serverConn.Close()
 
