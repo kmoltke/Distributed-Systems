@@ -1,0 +1,16 @@
+syntax = "proto3";
+package timeserver;
+
+option go_package = "./";
+
+message TimeRequest {
+  string clientName = 1;
+}
+
+message TimeResponse {
+  int64 time = 1;
+}
+
+service Time {
+  rpc GetTime(TimeRequest) returns (TimeResponse) {};
+}
